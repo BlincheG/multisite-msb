@@ -1,9 +1,8 @@
 <template lang="pug">
     .congrats-app
         modal-component(
-        ref="modal"
-        className="congrats-modal"
-        v-bind:triggerclass="triggerclass")
+            ref="modal"
+            className="congrats-modal")
 
             .congrats-wrap
                 .congrats-title Ваша заявка успешно отправлена!
@@ -13,9 +12,7 @@
 <style lang="stylus">
     .congrats-modal
         .modal-wrap
-            background-image url('/images/front/modal-background.jpg')
-            background-size cover
-            background-position center center
+            overflow hidden
 
     .congrats-wrap
         width 100%
@@ -23,12 +20,12 @@
         text-align center
 
     .congrats-title
-        color #1c214c
-        font-size 1.2rem
+        color #333
+        font-size 1.7rem
 
     .congrats-text
-        color #1c214c
-        font-size 1rem
+        color #333
+        font-size 1.3rem
         font-weight 300
         line-height 1.2rem
         margin-top 30px
@@ -36,11 +33,6 @@
 
 <script>
     export default {
-        props: {
-            triggerclass: {
-                default: null
-            }
-        },
         mounted: function() {
             this.$refs.modal.hideTitle();
         },

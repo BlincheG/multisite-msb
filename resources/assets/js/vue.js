@@ -40,7 +40,7 @@ new Vue({
   el: '#app',
   methods: {
     onModalClick () {
-      console.log('gg')
+      this.$refs.callbackModal.show();
     }
   }
 });

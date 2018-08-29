@@ -16,15 +16,14 @@
     @yield('metrix-head')
 </head>
 <body>
+    @yield('metrix-body')
+
     <div id="app">
-        @yield('metrix-body')
         @yield('content')
+        <callback-component ref="callbackModal" actions="{{ json_encode(['submit' => '/callback.json']) }}" title="Закажите консультацию"></callback-component>
     </div>
 </body>
 
-<div id="CallbackComponent" actions="{{ json_encode(['submit' => '/callback.json']) }}" triggerClass=".callback-trigger" title="Закажите консультацию"></div>
-<div id="CongratsComponent" triggerClass=".congrats-trigger"></div>
-<div class="congrats-trigger" style="display: none;"></div>
 
 <script src="https://use.fontawesome.com/b953d657bb.js"></script>
 <script src="/js/manifest.js"></script>
