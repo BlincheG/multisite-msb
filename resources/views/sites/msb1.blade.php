@@ -106,7 +106,7 @@
                                         всего лишь за <b>23 879 тенге в день!</b>
                                     </h5>
 
-                                    <button class="b24-web-form-popup-btn-8 main-banner-cta callback-trigger">Оставить заявку</button>
+                                    <button @click="onModalClick" class="b24-web-form-popup-btn-8 main-banner-cta callback-trigger">Оставить заявку</button>
                                 </div>
                             </div>
                         </div>

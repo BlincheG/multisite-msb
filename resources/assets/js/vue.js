@@ -36,38 +36,11 @@ _.forEach(components, function(component) {
 });
 
 /* initialize */
-(function($, Vue)
-{
-    /* after, initialize */
-    _.forEach(components, function(component) {
-        var wrap = $(component.wrap);
-
-        if ($(wrap).length <= 0) {
-            return;
-        }
-
-        var props = {};
-
-        /* read props from wrap */
-        $(wrap).each(function() {
-            /* each props */
-            _.forEach(this.attributes, function(attr, key) {
-                var value = null;
-
-                try {
-                    value = JSON.parse(attr.nodeValue);
-                } catch (e) {
-                    value = attr.nodeValue;
-                }
-
-                props[attr.nodeName] = value;
-            });
-
-            /* init component */
-            new (Vue.extend(component.app))({
-                el: this,
-                propsData: props
-            });
-        });
-    });
-})(jQuery, Vue);
+new Vue({
+  el: '#app',
+  methods: {
+    onModalClick () {
+      console.log('gg')
+    }
+  }
+});

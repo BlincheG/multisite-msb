@@ -16,8 +16,10 @@
     @yield('metrix-head')
 </head>
 <body>
-    @yield('metrix-body')
-    @yield('content')
+    <div id="app">
+        @yield('metrix-body')
+        @yield('content')
+    </div>
 </body>
 
 <div id="CallbackComponent" actions="{{ json_encode(['submit' => '/callback.json']) }}" triggerClass=".callback-trigger" title="Закажите консультацию"></div>
