@@ -20,7 +20,7 @@
 
     <div id="app">
         @yield('content')
-        <callback-component ref="callbackModal" actions="{{ json_encode(['submit' => '/callback.json']) }}" title="Закажите консультацию"></callback-component>
+        <callback-component ref="callbackModal" title="Закажите консультацию"></callback-component>
     </div>
 </body>
 
